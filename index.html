@@ -1,0 +1,412 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Anuj Gadakh Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one engineering drawing sheet. Name set in condensed lettering, a title block for the facts,
+   each section is a numbered sheet in the set. Accent is a single cobalt ink. */
+:root {
+  --paper: #e8ecf0;
+  --sheet: #f8fafc;
+  --ink: #14202e;
+  --ink-2: #47586d;
+  --line: #bcc8d4;
+  --grid: rgba(20, 32, 46, 0.055);
+  --accent: #1d44cf;
+  --accent-on: #ffffff;
+  --display: 'Archivo', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b1118;
+    --sheet: #121a23;
+    --ink: #e6edf5;
+    --ink-2: #9fb2c6;
+    --line: #2b3a4b;
+    --grid: rgba(230, 237, 245, 0.05);
+    --accent: #86a2ff;
+    --accent-on: #0b1118;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0b1118;
+  --sheet: #121a23;
+  --ink: #e6edf5;
+  --ink-2: #9fb2c6;
+  --line: #2b3a4b;
+  --grid: rgba(230, 237, 245, 0.05);
+  --accent: #86a2ff;
+  --accent-on: #0b1118;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 24px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3, p, ul, dl, dd { margin: 0; }
+ul { padding: 0; list-style: none; }
+section, header, footer { scroll-margin-top: 16px; }
+
+.sheet {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--sheet);
+  border: 1px solid var(--ink);
+  box-shadow: 0 0 0 5px var(--sheet), 0 0 0 6px var(--ink);
+}
+
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+
+/* ---------- Hero ---------- */
+.hero { padding: clamp(18px, 4vw, 40px); }
+.topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.nav a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink-2); padding: 4px 0; border-bottom: 1px solid transparent; }
+.nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.toggle { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1px solid var(--ink); padding: 6px 12px; cursor: pointer; }
+.toggle:hover { background: var(--ink); color: var(--sheet); }
+
+.hero-main { display: grid; gap: 32px; align-items: end; padding-top: clamp(24px, 5vw, 48px); }
+@media (min-width: 920px) { .hero-main { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: 48px; } }
+.hero-tag { display: block; margin-bottom: 16px; }
+.hero-tag b { color: var(--accent); font-weight: 500; }
+h1 {
+  font-family: var(--display);
+  font-stretch: 62%;
+  font-weight: 850;
+  font-size: clamp(3.6rem, 15.5vw, 10rem);
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+h1 span { display: block; }
+.dim { display: flex; align-items: center; gap: 12px; margin-top: 24px; color: var(--accent); }
+.dim-line { position: relative; flex: 1 1 16px; min-width: 16px; height: 1px; background: var(--accent); }
+.dim-line::before, .dim-line::after { content: ""; position: absolute; top: -6px; width: 1px; height: 13px; background: var(--accent); }
+.dim-line:first-child::before { left: 0; }
+.dim-line:first-child::after { display: none; }
+.dim-line:last-child::after { right: 0; }
+.dim-line:last-child::before { display: none; }
+.dim-text { flex: 0 1 auto; min-width: 0; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
+.lede { max-width: 62ch; margin-top: 24px; font-size: 1.0625rem; color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; text-decoration: none; padding: 10px 16px; border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; }
+.btn:hover { background: var(--ink); color: var(--sheet); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-on); }
+.btn.primary:hover { background: var(--ink); border-color: var(--ink); color: var(--sheet); }
+
+.tblock { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink); border: 1px solid var(--ink); }
+.cell { background: var(--sheet); padding: 9px 12px; min-width: 0; }
+.cell.wide { grid-column: 1 / -1; }
+.cell .mono { display: block; font-size: 10.5px; margin-bottom: 2px; }
+.cell p { font-size: 14px; font-weight: 500; line-height: 1.4; overflow-wrap: anywhere; }
+
+/* ---------- Bands (sheets) ---------- */
+.band { border-top: 1px solid var(--ink); padding: clamp(28px, 5vw, 52px) clamp(18px, 4vw, 40px); display: grid; gap: 24px; }
+@media (min-width: 860px) { .band { grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 40px; } }
+.band-head { display: flex; flex-direction: column; gap: 6px; }
+.band-head .no { color: var(--accent); }
+h2 { font-family: var(--display); font-stretch: 75%; font-weight: 750; font-size: clamp(1.7rem, 3.2vw, 2.3rem); line-height: 1; text-transform: uppercase; letter-spacing: 0.005em; text-wrap: balance; }
+.band-body { min-width: 0; }
+
+.entry { padding-block: 22px; border-top: 1px solid var(--line); }
+.entry:first-child { padding-top: 0; border-top: 0; }
+.entry:last-child { padding-bottom: 0; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; margin-bottom: 14px; }
+h3 { font-family: var(--display); font-stretch: 85%; font-weight: 700; font-size: 1.35rem; line-height: 1.15; text-wrap: balance; }
+.org { color: var(--accent); font-weight: 600; margin-top: 2px; }
+.meta { font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+@media (min-width: 640px) { .meta { text-align: right; } }
+.ticks { display: grid; gap: 8px; max-width: 70ch; }
+.ticks li { position: relative; padding-left: 20px; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 0.68em; width: 7px; height: 7px; background: var(--accent); }
+
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px; }
+.proj { border: 1px solid var(--ink); padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.proj p { color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: var(--mono); font-size: 12.5px; padding: 3px 9px; border: 1px solid var(--line); color: var(--ink); background: transparent; }
+
+.skills { display: grid; }
+.skills > div { display: grid; gap: 8px; padding-block: 16px; border-top: 1px solid var(--line); }
+.skills > div:first-child { border-top: 0; padding-top: 0; }
+.skills > div:last-child { padding-bottom: 0; }
+@media (min-width: 640px) { .skills > div { grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 24px; align-items: baseline; } }
+
+.gauge { position: relative; height: 10px; border: 1px solid var(--ink); margin-top: 12px; max-width: 360px; }
+.gauge .fill { position: absolute; inset: 0 auto 0 0; width: calc(var(--v) * 100%); background: var(--accent); }
+.gauge::after { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(10% - 1px), var(--sheet) calc(10% - 1px), var(--sheet) 10%); }
+.score { margin-top: 10px; font-family: var(--mono); font-size: 13px; color: var(--ink); }
+
+/* ---------- Contact ---------- */
+.contact { border-top: 1px solid var(--ink); padding: clamp(28px, 5vw, 52px) clamp(18px, 4vw, 40px); }
+.contact h2 { margin-bottom: 24px; }
+.crow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-block: 14px; border-top: 1px solid var(--line); }
+.crow .mono { flex: 0 0 90px; }
+.cval { flex: 1 1 220px; min-width: 0; font-family: var(--mono); font-size: clamp(0.95rem, 3.2vw, 1.25rem); overflow-wrap: anywhere; }
+.cval a { text-decoration: none; border-bottom: 1px solid var(--accent); }
+.cval a:hover { color: var(--accent); }
+.copy { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; min-width: 84px; }
+.copy:hover { background: var(--ink); color: var(--sheet); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--ink); }
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--accent); }
+</style>
+
+<div class="sheet">
+
+  <header class="hero" id="top">
+    <div class="topbar">
+      <nav class="nav" aria-label="Sections">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="toggle" id="theme" type="button">Switch theme</button>
+    </div>
+
+    <div class="hero-main">
+      <div>
+        <span class="mono hero-tag"><b>Sheet 1 of 6</b> &nbsp;/&nbsp; Profile</span>
+        <h1><span>Anuj</span><span>Gadakh</span></h1>
+        <div class="dim" aria-hidden="true">
+          <span class="dim-line"></span>
+          <span class="dim-text">Data Science · AI · Full-stack</span>
+          <span class="dim-line"></span>
+        </div>
+        <p class="lede">Information Technology Engineering student with a strong background in Computer Technology and a solid foundation in Python, Data Structures &amp; Algorithms, Machine Learning, SQL and core computer science. I build AI-driven and full-stack web applications, and I'm focused on scalable solutions and practical technical depth.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="https://github.com/AnujGadakh" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/anuj-gadakh-53a7a925b" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="tblock" role="list" aria-label="Summary">
+        <div class="cell wide" role="listitem"><span class="mono">Name</span><p>Anuj Gadakh</p></div>
+        <div class="cell wide" role="listitem"><span class="mono">Programme</span><p>B.E. Information Technology Engineering</p></div>
+        <div class="cell wide" role="listitem"><span class="mono">Institute</span><p>Pune Vidyarthi Griha College of Engineering</p></div>
+        <div class="cell" role="listitem"><span class="mono">CGPA</span><p>7.5 / 10</p></div>
+        <div class="cell" role="listitem"><span class="mono">Based in</span><p>Nashik, Maharashtra</p></div>
+        <div class="cell" role="listitem"><span class="mono">Since</span><p>Sep 2024</p></div>
+        <div class="cell" role="listitem"><span class="mono">Sheets</span><p>6</p></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="band" id="experience" aria-labelledby="h-exp">
+    <div class="band-head">
+      <span class="mono no">Sheet 2 of 6</span>
+      <h2 id="h-exp">Experience</h2>
+    </div>
+    <div class="band-body">
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3>Data Science Trainee Intern</h3>
+            <p class="org">Softcrowd Technologies</p>
+          </div>
+          <p class="meta">Feb 2026 – Mar 2026<br>Nashik, Maharashtra</p>
+        </div>
+        <ul class="ticks">
+          <li>Engineered data preprocessing pipelines using Python, Pandas and NumPy to improve data quality and analytical efficiency.</li>
+          <li>Analyzed complex datasets through Exploratory Data Analysis (EDA) and visualization with Pandas, Matplotlib and Seaborn.</li>
+          <li>Designed and deployed scalable Machine Learning pipelines covering preprocessing, feature engineering, model optimization, evaluation and deployment.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3>Software Trainee Intern</h3>
+            <p class="org">Softcrowd Technologies</p>
+          </div>
+          <p class="meta">Jul 2023 – Aug 2023<br>Nashik, Maharashtra</p>
+        </div>
+        <ul class="ticks">
+          <li>Built and integrated REST API calls between frontend and backend components.</li>
+          <li>Took part in Agile/Scrum-style sprints with regular stand-ups and task tracking.</li>
+          <li>Conducted code reviews and debugging sessions with team members.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="projects" aria-labelledby="h-proj">
+    <div class="band-head">
+      <span class="mono no">Sheet 3 of 6</span>
+      <h2 id="h-proj">Projects</h2>
+    </div>
+    <div class="band-body projects">
+      <article class="proj">
+        <h3>Smart Currency Exchange Rate Prediction with AI</h3>
+        <div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow</span></div>
+        <p>Collaborated on backend integration and predictive model deployment to deliver scalable, AI-powered currency forecasting with real-time insights.</p>
+      </article>
+      <article class="proj">
+        <h3>Student Academic Performance Assessment System</h3>
+        <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">ReactJS</span><span class="chip">Python</span><span class="chip">PostgreSQL</span></div>
+        <p>Led development of an automated system for academic performance evaluation and analysis, improving efficiency and data accuracy through structured data processing and performance tracking.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="skills" aria-labelledby="h-skills">
+    <div class="band-head">
+      <span class="mono no">Sheet 4 of 6</span>
+      <h2 id="h-skills">Technical Skills</h2>
+    </div>
+    <div class="band-body">
+      <dl class="skills">
+        <div><dt class="mono">Languages</dt><dd class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Python</span></dd></div>
+        <div><dt class="mono">Frontend</dt><dd class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">ReactJS</span></dd></div>
+        <div><dt class="mono">Backend</dt><dd class="chips"><span class="chip">Node.js</span><span class="chip">Express.js</span></dd></div>
+        <div><dt class="mono">Database</dt><dd class="chips"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span></dd></div>
+        <div><dt class="mono">Core competencies</dt><dd class="chips"><span class="chip">Data Structures &amp; Algorithms</span><span class="chip">OOP</span><span class="chip">Operating Systems</span><span class="chip">Computer Networks</span><span class="chip">Cybersecurity Fundamentals</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="band" id="education" aria-labelledby="h-edu">
+    <div class="band-head">
+      <span class="mono no">Sheet 5 of 6</span>
+      <h2 id="h-edu">Education</h2>
+    </div>
+    <div class="band-body">
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3>Pune Vidyarthi Griha College of Engineering</h3>
+            <p class="org">Bachelor of Engineering (B.E.), Information Technology Engineering</p>
+          </div>
+          <p class="meta">Sep 2024 – Present<br>Nashik, Maharashtra</p>
+        </div>
+        <p class="score">CGPA 7.5 / 10</p>
+        <div class="gauge" style="--v: 0.75" role="img" aria-label="CGPA 7.5 out of 10"><span class="fill"></span></div>
+      </article>
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <h3>K. K. Wagh Polytechnic</h3>
+            <p class="org">Diploma in Computer Technology</p>
+          </div>
+          <p class="meta">Oct 2021 – Jun 2024<br>Nashik, Maharashtra</p>
+        </div>
+        <p class="score">84.00 %</p>
+        <div class="gauge" style="--v: 0.84" role="img" aria-label="84 percent"><span class="fill"></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="achievements" aria-labelledby="h-ach">
+    <div class="band-head">
+      <span class="mono no">Sheet 6 of 6</span>
+      <h2 id="h-ach">Certificates &amp; Achievements</h2>
+    </div>
+    <div class="band-body">
+      <ul class="ticks">
+        <li>Completed the Alpha course (DSA with Java).</li>
+        <li>Participated in a hackathon and developed an AI-powered predictive analytics application.</li>
+        <li>AWS Academy Graduate, AWS Academy Cloud Foundations.</li>
+        <li>Built multiple software projects using ReactJS, Python, PostgreSQL and C++.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="crow">
+      <span class="mono">Email</span>
+      <span class="cval" id="c-email"><a href="mailto:anujgadakh21@gmail.com">anujgadakh21@gmail.com</a></span>
+      <button class="copy" type="button" data-copy="c-email">Copy</button>
+    </div>
+    <div class="crow">
+      <span class="mono">Phone</span>
+      <span class="cval" id="c-phone">+91 83901 67467</span>
+      <button class="copy" type="button" data-copy="c-phone">Copy</button>
+    </div>
+    <div class="crow">
+      <span class="mono">GitHub</span>
+      <span class="cval"><a href="https://github.com/AnujGadakh" target="_blank" rel="noopener">github.com/AnujGadakh</a></span>
+    </div>
+    <div class="crow">
+      <span class="mono">LinkedIn</span>
+      <span class="cval"><a href="https://www.linkedin.com/in/anuj-gadakh-53a7a925b" target="_blank" rel="noopener">linkedin.com/in/anuj-gadakh-53a7a925b</a></span>
+    </div>
+    <div class="foot mono">
+      <span>Anuj Gadakh · Nashik, Maharashtra</span>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  try {
+    var saved = localStorage.getItem('ag-theme');
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+  } catch (e) {}
+
+  document.getElementById('theme').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme');
+    if (!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('ag-theme', next); } catch (e) {}
+  });
+
+  function selectText(el) {
+    var r = document.createRange();
+    r.selectNodeContents(el);
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy'));
+      var text = el.textContent.trim();
+      var done = function (label) {
+        btn.textContent = label;
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+      };
+      try {
+        navigator.clipboard.writeText(text).then(
+          function () { done('Copied'); },
+          function () { selectText(el); done('Selected'); }
+        );
+      } catch (e) {
+        selectText(el);
+        done('Selected');
+      }
+    });
+  });
+})();
+</script>
+
+</body></html>
